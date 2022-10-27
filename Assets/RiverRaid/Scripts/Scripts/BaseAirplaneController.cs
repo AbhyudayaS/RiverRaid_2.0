@@ -57,12 +57,12 @@ namespace RiverRaid
             if (xThrow == 0 && yThrow == 0) return;           
             float roll = xThrow * controlRollFactor;
             transform.localRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, roll);
+            transform.Rotate(_rotation);
         }
 
         private void MoveForward()
         {
             _rb.velocity = transform.forward * throttle;
-            transform.Rotate(_rotation);
         }
 
         private void HandleInput()
