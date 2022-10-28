@@ -44,17 +44,19 @@ namespace RiverRaid
         }
 
         private void ResetZRot()
-        {
-            if (xThrow == 0 && yThrow == 0)
+        {            
+            if (xThrow == 0 )
             {
+                
                 var targetRot = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 3f * Time.deltaTime);
+                //transform.rotation = Quaternion.RotateTowards(currentRot, targetRot, 0.10f );
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 0.5f * Time.deltaTime);
             }
         }
 
         private void ProcessRotaion()
         {
-            if (xThrow == 0 && yThrow == 0) return;           
+            if (xThrow == 0 ) return;           
             float roll = xThrow * controlRollFactor;
             transform.localRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, roll);
             transform.Rotate(_rotation);
@@ -69,7 +71,7 @@ namespace RiverRaid
         {
             xThrow = _inputListener.move.x;
             yThrow = _inputListener.move.y;
-            //transform.position += new Vector3(0f, yThrow, 0) * throttle * Time.fixedDeltaTime;
+            
             _rotation = new Vector3(yThrow, xThrow, 0f) * controlSpeed * Time.deltaTime;
         }
     }
