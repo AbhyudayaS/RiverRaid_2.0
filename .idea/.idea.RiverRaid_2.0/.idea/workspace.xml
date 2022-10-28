@@ -5,41 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67cebf7a-9aeb-4b91-99d6-f67c9597c892" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Boom.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Countdown_01.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Countdown_01.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Countdown_02.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Countdown_02.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Game_Music.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Game_Music.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/PewPew_Cropped.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/PewPew_Cropped.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Plane_Sounds.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Plane_Sounds.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Through_Ring01.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Through_Ring01.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Through_Ring02.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Through_Ring02.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Yaaay.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Yaaay.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Yay.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Yay.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Scripts/Scripts/SceneLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Scripts/Scripts/SceneLoader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Scripts/Scripts/SceneState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Scripts/Scripts/SceneState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Scripts/Scripts/TState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RiverRaid/Scripts/Scripts/TState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/IndiePixel_Framework/Core/Code/Editor/Level_Tools/Vertex_Painter/Fonts/Futura_Exblk__bd_cd_it_BT_0.TTF" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IndiePixel_Framework/Core/Code/Editor/Level_Tools/Vertex_Painter/Fonts/Futura_Exblk__bd_cd_it_BT_0.TTF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/IndiePixel_Framework/Core/Code/Editor/Level_Tools/Vertex_Painter/Fonts/Futura_bd_cd_BT_0.TTF" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IndiePixel_Framework/Core/Code/Editor/Level_Tools/Vertex_Painter/Fonts/Futura_bd_cd_BT_0.TTF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/IndiePixel_Framework/Core/Code/Editor/Level_Tools/Vertex_Painter/Fonts/Futura_med_cond_bd_BT_0.TTF" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IndiePixel_Framework/Core/Code/Editor/Level_Tools/Vertex_Painter/Fonts/Futura_med_cond_bd_BT_0.TTF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/PewPew.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/PewPew.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Audio/Boom.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RiverRaid/Art/Objects/Button.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Objects/Button.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RiverRaid/Scenes/Andre/AndreGym.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiverRaid/Scenes/Andre/AndreGym.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RiverRaid/Scenes/RiverRaid_Startup.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiverRaid/Scenes/RiverRaid_Startup.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,21 +30,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "rider.run.widget.enabled.cache": "false",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.9f1\Editor\Unity.exe" />
@@ -104,6 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666652738066</updated>
       <workItem from="1666652741799" duration="677000" />
+      <workItem from="1666811217989" duration="652000" />
     </task>
     <servers />
   </component>
