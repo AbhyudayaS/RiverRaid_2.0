@@ -1,34 +1,9 @@
 fileFormatVersion: 2
-guid: 03ca12e3acc6b884b8e68d5429d48e3e
+guid: 30630657062c6da4c8ea000e90aa8fa5
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BLUE
-    second: {fileID: 2100000, guid: 1699c1e7aa75cd949b8bbfc51a3884e1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 99c9f43db983ce24194de77dd9494e41, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: YELLOW
-    second: {fileID: 2100000, guid: 37f9240408a967443be597a29daea787, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: darkblue
-    second: {fileID: 2100000, guid: baf22ecc6e2733441a25940c9a677f17, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: wINDOW
-    second: {fileID: 2100000, guid: 1805c378835264c43b6411bf9dde504a, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -113,7 +88,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.01
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
