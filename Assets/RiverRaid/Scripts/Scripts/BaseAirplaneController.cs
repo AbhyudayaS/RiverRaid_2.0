@@ -18,6 +18,8 @@ namespace RiverRaid
         protected float throttle = 0f;     
         [SerializeField]
         private float controlRollFactor;
+        [SerializeField]
+        private float _inputDeadZone;
 
         private InputListener _inputListener;
         private Rigidbody _rb;
@@ -50,16 +52,15 @@ namespace RiverRaid
                 
                 var targetRot = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
                 //transform.rotation = Quaternion.RotateTowards(currentRot, targetRot, 0.10f );
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 0.5f * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 3f * Time.deltaTime);
             }
         }
 
         private void ProcessRotaion()
         {
-            if (xThrow == 0 ) return;           
+            if (xThrow == 0 && yThrow == 0) return;
             float roll = xThrow * controlRollFactor;
             transform.localRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, roll);
-            transform.Rotate(_rotation);
         }
 
         private void MoveForward()
@@ -71,8 +72,12 @@ namespace RiverRaid
         {
             xThrow = _inputListener.move.x;
             yThrow = _inputListener.move.y;
+            //transform.Rotate(Vector3.up * xThrow * 0, 2f);
             
+
             _rotation = new Vector3(yThrow, xThrow, 0f) * controlSpeed * Time.deltaTime;
+            transform.Rotate(_rotation);
+
         }
     }
 }
