@@ -4,5 +4,9 @@ using UnityEngine;
 
 
 public class ProjectileController : MonoBehaviour
-{  
+{
+    private void Update()
+    {
+     
+    }
 }

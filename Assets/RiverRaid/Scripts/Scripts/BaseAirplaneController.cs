@@ -59,7 +59,10 @@ namespace RiverRaid
         {
             if (xThrow == 0 && yThrow == 0) return;
             float roll = xThrow * controlRollFactor;
-            transform.localRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, roll);
+            var desireRot = Quaternion.Euler( new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, roll));
+            //transform.localRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, roll);
+            transform.localRotation = Quaternion.Slerp(transform.rotation, desireRot, 3f * Time.deltaTime);
+
         }
 
         private void MoveForward()
@@ -71,8 +74,7 @@ namespace RiverRaid
         {
             xThrow = _inputListener.move.x;
             yThrow = _inputListener.move.y;
-            //transform.Rotate(Vector3.up * xThrow * 0, 2f);
-            
+            //transform.Rotate(Vector3.up * xThrow * 0, 2f);           
 
             _rotation = new Vector3(yThrow, xThrow, 0f) * controlSpeed * Time.deltaTime;
             transform.Rotate(_rotation);

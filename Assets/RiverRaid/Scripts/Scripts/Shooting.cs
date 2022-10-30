@@ -17,7 +17,6 @@ public class Shooting : MonoBehaviour
     private AudioSource _shootingSound;
     private InputListener _inputListener;
     private bool canFire = true;
-    private Vector3 _destination;
 
     private void Start()
     {
@@ -46,22 +45,24 @@ public class Shooting : MonoBehaviour
 
     private void FireProjectile()
     {
-        Ray ray = _camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        Ray ray = _camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         RaycastHit hit;
-
+        Vector3 _destination;
         if (Physics.Raycast(ray, out hit))
         {
             _destination = hit.point;
-            Debug.Log(hit.transform.gameObject.name);
+
         }
         else
         {
             _destination = ray.GetPoint(10000f);
         }
 
-        var projectileObj =  Instantiate(_projectile._projectilePrefab, _firingPos.position, _firingPos.localRotation);       
-        projectileObj.GetComponent<Rigidbody>().velocity = (_destination - _firingPos.position).normalized * _projectile.MoveSpeed;
-        projectileObj.transform.rotation = transform.localRotation;
+        //var projectileObj =  Instantiate(_projectile._projectilePrefab, _firingPos.position, transform.rotation);
+        var bullet = Instantiate(_projectile._projectilePrefab, _firingPos.transform.position, _firingPos.transform.rotation);
+        bullet.GetComponent<Rigidbody>().velocity = (_destination - _firingPos.transform.position).normalized * _projectile.MoveSpeed;
+
+
         _shootingSound.Play();       
     }
 
