@@ -54,7 +54,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 30
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 108774932832485744}
   - component: {fileID: 108774932832485745}
   - component: {fileID: 108774932832485749}
-  - component: {fileID: 108774932832485738}
+  - component: {fileID: 1942407523}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Damping: 0
---- !u!114 &108774932832485738
+--- !u!114 &1942407523
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

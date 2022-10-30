@@ -73,9 +73,7 @@ namespace RiverRaid
         private void HandleInput()
         {
             xThrow = _inputListener.move.x;
-            yThrow = _inputListener.move.y;
-            //transform.Rotate(Vector3.up * xThrow * 0, 2f);           
-
+            yThrow = _inputListener.move.y;           
             _rotation = new Vector3(yThrow, xThrow, 0f) * controlSpeed * Time.deltaTime;
             transform.Rotate(_rotation);
 

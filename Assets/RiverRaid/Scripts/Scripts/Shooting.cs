@@ -17,11 +17,12 @@ public class Shooting : MonoBehaviour
     private AudioSource _shootingSound;
     private InputListener _inputListener;
     private bool canFire = true;
+    Vector3 _destination;
 
     private void Start()
     {
         _inputListener = GetComponent<InputListener>();
-        
+
     }
 
     private void Update()
@@ -29,7 +30,7 @@ public class Shooting : MonoBehaviour
         if (_inputListener.interact)
         {
             OnFireButtonClicked();
-        }       
+        }
     }
 
     public void OnFireButtonClicked()
@@ -47,7 +48,7 @@ public class Shooting : MonoBehaviour
     {
         Ray ray = _camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         RaycastHit hit;
-        Vector3 _destination;
+
         if (Physics.Raycast(ray, out hit))
         {
             _destination = hit.point;
@@ -55,15 +56,15 @@ public class Shooting : MonoBehaviour
         }
         else
         {
-            _destination = ray.GetPoint(10000f);
+            _destination = ray.GetPoint(10f);
         }
 
         //var projectileObj =  Instantiate(_projectile._projectilePrefab, _firingPos.position, transform.rotation);
         var bullet = Instantiate(_projectile._projectilePrefab, _firingPos.transform.position, _firingPos.transform.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = (_destination - _firingPos.transform.position).normalized * _projectile.MoveSpeed;
+        bullet.GetComponent<Rigidbody>().velocity = (_destination - _firingPos.position).normalized * 10f;
 
 
-        _shootingSound.Play();       
+        _shootingSound.Play();
     }
 
     IEnumerator ReloadDelay()
