@@ -7,10 +7,8 @@ namespace RiverRaid
 {
     public class BaseAirplaneController : MonoBehaviour
     {
-        #region Variables
-        [SerializeField]
-        protected float yThrow = 0f;
-        [SerializeField]
+        #region Variables       
+        protected float yThrow = 0f;       
         protected float xThrow = 0f;
         [SerializeField]
         protected float controlSpeed = 0f;
@@ -19,7 +17,7 @@ namespace RiverRaid
         [SerializeField]
         private float controlRollFactor;
         [SerializeField]
-        private float _inputDeadZone;
+        private float _rotaionSpeed;
 
         private InputListener _inputListener;
         private Rigidbody _rb;
@@ -51,7 +49,7 @@ namespace RiverRaid
                 
                 var targetRot = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
                 //transform.rotation = Quaternion.RotateTowards(currentRot, targetRot, 0.10f );
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 3f * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, _rotaionSpeed * Time.deltaTime);
             }
         }
 
@@ -61,7 +59,7 @@ namespace RiverRaid
             float roll = xThrow * controlRollFactor;
             var desireRot = Quaternion.Euler( new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, roll));
             //transform.localRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, roll);
-            transform.localRotation = Quaternion.Slerp(transform.rotation, desireRot, 3f * Time.deltaTime);
+            transform.localRotation = Quaternion.Slerp(transform.rotation, desireRot, _rotaionSpeed * Time.deltaTime);
 
         }
 
