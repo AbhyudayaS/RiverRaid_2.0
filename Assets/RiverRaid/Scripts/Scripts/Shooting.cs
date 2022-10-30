@@ -13,6 +13,8 @@ public class Shooting : MonoBehaviour
     private Transform _firingPos;
     [SerializeField]
     private Camera _camera;
+    [SerializeField]
+    private AudioSource _shootingSound;
     private InputListener _inputListener;
     private bool canFire = true;
     private Vector3 _destination;
@@ -57,8 +59,10 @@ public class Shooting : MonoBehaviour
             _destination = ray.GetPoint(10000f);
         }
 
-        var projectileObj =  Instantiate(_projectile._projectilePrefab, _firingPos.position, Quaternion.identity);       
+        var projectileObj =  Instantiate(_projectile._projectilePrefab, _firingPos.position, _firingPos.localRotation);       
         projectileObj.GetComponent<Rigidbody>().velocity = (_destination - _firingPos.position).normalized * _projectile.MoveSpeed;
+        projectileObj.transform.rotation = transform.localRotation;
+        _shootingSound.Play();       
     }
 
     IEnumerator ReloadDelay()

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3b99a8f9492344289111ccf689126f, type: 3}
   m_Name: Missiles
   m_EditorClassIdentifier: 
-  _projectilePrefab: {fileID: 1183854604086846187, guid: a7b1b8d5bab677947bc20dfe2ec40c1f,
+  _projectilePrefab: {fileID: 6011079434516115339, guid: 09aca66f1b228db4484927e42d451653,
     type: 3}
   fireInterval: 2
-  moveSpeed: 400
+  moveSpeed: 2

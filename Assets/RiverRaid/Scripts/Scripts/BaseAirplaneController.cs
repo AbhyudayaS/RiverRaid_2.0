@@ -47,8 +47,7 @@ namespace RiverRaid
 
         private void ResetZRot()
         {            
-            if (xThrow == 0 )
-            {
+            if (xThrow == 0 )           {
                 
                 var targetRot = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
                 //transform.rotation = Quaternion.RotateTowards(currentRot, targetRot, 0.10f );
