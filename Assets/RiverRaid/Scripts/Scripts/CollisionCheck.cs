@@ -22,6 +22,12 @@ public class CollisionCheck : MonoBehaviour
             _timer += Time.deltaTime;
 
         }
+
+        if (col.CompareTag("Environment")) 
+        {
+            _playerState.Value = PState.DEAD;
+        }
+
     }
 
     private void OnTriggerStay(Collider other)
