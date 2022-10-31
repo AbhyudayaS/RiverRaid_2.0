@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
-    private void Update()
-    {
-     
-    }
+    //public Vector3 _direction;
+    //public float speed;
+
+    //private void Update()
+    //{
+    //    transform.Translate((_direction - transform.position).normalized * speed);
+    //}
+
 }
