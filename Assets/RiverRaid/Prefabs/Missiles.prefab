@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6011079434516115340}
   - component: {fileID: 5092639771244293215}
   - component: {fileID: 4829619775194086016}
+  - component: {fileID: 2722032366158853434}
   m_Layer: 0
   m_Name: Missiles
   m_TagString: Untagged
@@ -63,6 +64,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &2722032366158853434
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6011079434516115339}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.007
+  m_Height: 0.04
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.06}
 --- !u!1001 &653350255185765312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168,7 +183,7 @@ PrefabInstance:
     - target: {fileID: 8656522925583198860, guid: e509867be4f82f246a95eca1ee5a2d61,
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
-      value: 0.01
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 8656522925583198860, guid: e509867be4f82f246a95eca1ee5a2d61,
         type: 3}
@@ -293,23 +308,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4829619774993716042}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5748607744244379163 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 29a10cf92af31844993e75750547f7e4,
-    type: 3}
-  m_PrefabInstance: {fileID: 4829619774993716042}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &4184639592649225579
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5748607744244379163}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.0120930625
-  m_Height: 0.005363755
-  m_Direction: 1
-  m_Center: {x: 0.0120930625, y: 0.0000000012805685, z: -1.1641535e-10}
