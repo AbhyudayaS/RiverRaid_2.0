@@ -4,10 +4,4 @@ using UnityEngine;
 
 public class OutOfBounds : MonoBehaviour
 {
-    [SerializeField]
-    public static int outOfBoundsTimer;
-
-
-
-    
 }

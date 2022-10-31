@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class BaseAirplaneController : MonoBehaviour
 {
+    [SerializeField]
+    private PlayerState _playerState;
     #region Variables       
     protected float yThrow = 0f;
     protected float xThrow = 0f;
@@ -22,12 +24,37 @@ public class BaseAirplaneController : MonoBehaviour
     private float _controlRollFactor;
     [SerializeField]
     private float _rotaionSpeed;
+    [SerializeField]
+    private AudioSource _boomAudio;
+    [SerializeField]
+    private ParticleSystem _boomPS;
+    [SerializeField]
+    private GameObject _planeModel;
 
     private InputListener _inputListener;
     private Rigidbody _rb;
     private Vector3 _rotation;
     private float _initThrottle;
+    private bool _playerDead;
     #endregion
+
+    private void OnEnable()
+    {
+        _playerState.Observers += CheckPlayerState;
+    }
+
+    private void OnDisable()
+    {
+        _playerState.Observers -= CheckPlayerState;
+    }
+    private void CheckPlayerState(PState obj)
+    {
+        if (obj == PState.DEAD)
+        {
+            _playerDead = true;
+            PlaneDestroyed();
+        }
+    }
 
     private void Start()
     {
@@ -38,6 +65,7 @@ public class BaseAirplaneController : MonoBehaviour
 
     private void Update()
     {
+        if (_playerDead) return;
         HandleInput();
         ResetZRot();
         ProcessRotaion();
@@ -45,6 +73,7 @@ public class BaseAirplaneController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_playerDead) return;
         MoveForward();
     }
 
@@ -105,6 +134,15 @@ public class BaseAirplaneController : MonoBehaviour
             yield return null;
         }       
         yield return null;
+    }
+
+    public void PlaneDestroyed()
+    {
+        _rb.velocity = Vector3.zero;
+       _throttle = 0;
+        _boomAudio.Play();
+        _boomPS.Play();
+        _planeModel.SetActive(false);       
     }
 }
 
