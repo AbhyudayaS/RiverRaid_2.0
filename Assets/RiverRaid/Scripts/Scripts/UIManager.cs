@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     private PlayerState _playerState;
     [SerializeField]
     private TextMeshProUGUI _playerDangerState;
+    [SerializeField]
+    private GameObject _gameRestartUI;
+
     private void OnEnable()
     {
         _playerState.Observers += UIPlayerState;
@@ -30,5 +33,17 @@ public class UIManager : MonoBehaviour
         {
             _playerDangerState.gameObject.SetActive(false);
         }
+
+        if(obj == PState.DEAD)
+        {
+            StartCoroutine(DisplayRestartScene());
+           
+        }
+    }
+
+    IEnumerator DisplayRestartScene()
+    {
+        yield return new WaitForSeconds(2f);
+        _gameRestartUI.gameObject.SetActive(true);
     }
 }
