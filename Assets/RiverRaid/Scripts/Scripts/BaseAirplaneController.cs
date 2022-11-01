@@ -39,6 +39,8 @@ public class BaseAirplaneController : MonoBehaviour
     [SerializeField]
     private int _ringPoints;
 
+    [SerializeField] private TrailRenderer[] wingTrailEffects;
+
     private InputListener _inputListener;
     private Rigidbody _rb;
     private Vector3 _rotation;
@@ -140,6 +142,10 @@ public class BaseAirplaneController : MonoBehaviour
         {
             _scoreState.Value += _ringPoints;
             _throttle = _boostSpeed;
+            foreach (var item in wingTrailEffects)
+            {
+                item.gameObject.SetActive(true);
+            }
             StartCoroutine(ResetThrottle());
         }
         if (other.gameObject.GetComponent<Enemies>() != null)
@@ -165,7 +171,11 @@ public class BaseAirplaneController : MonoBehaviour
             elapsedTime += Time.deltaTime;
          
             yield return null;
-        }       
+        }
+        foreach (var item in wingTrailEffects)
+        {
+            item.gameObject.SetActive(false);
+        }
         yield return null;
     }
 
