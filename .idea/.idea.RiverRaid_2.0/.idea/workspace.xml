@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67cebf7a-9aeb-4b91-99d6-f67c9597c892" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RiverRaid_2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RiverRaid_2.0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Ring.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Ring.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/IndiePixel_Framework/Core/Code/Editor/Level_Tools/Vertex_Painter/Fonts/Futura_Exblk__bd_cd_it_BT_0.TTF" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IndiePixel_Framework/Core/Code/Editor/Level_Tools/Vertex_Painter/Fonts/Futura_Exblk__bd_cd_it_BT_0.TTF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/IndiePixel_Framework/Core/Code/Editor/Level_Tools/Vertex_Painter/Fonts/Futura_bd_cd_BT_0.TTF" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IndiePixel_Framework/Core/Code/Editor/Level_Tools/Vertex_Painter/Fonts/Futura_bd_cd_BT_0.TTF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/IndiePixel_Framework/Core/Code/Editor/Level_Tools/Vertex_Painter/Fonts/Futura_med_cond_bd_BT_0.TTF" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IndiePixel_Framework/Core/Code/Editor/Level_Tools/Vertex_Painter/Fonts/Futura_med_cond_bd_BT_0.TTF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RiverRaid/Art/Objects/Button.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Objects/Button.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RiverRaid/Scenes/Andre/AndreGym.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiverRaid/Scenes/Andre/AndreGym.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RiverRaid/Scenes/RiverRaid_Startup.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiverRaid/Scenes/RiverRaid_Startup.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Cartoon Mini Pack Free/Models/Houses/house_small.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Cartoon Mini Pack Free/Models/Houses/house_small.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Playground Low Poly/Materials/T_Generic_colors.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Playground Low Poly/Materials/T_Generic_colors.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RiverRaid/Art/Fonts/IMPACT.TTF" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiverRaid/Art/Fonts/IMPACT.TTF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RiverRaid/Prefabs/Ship.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiverRaid/Prefabs/Ship.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RiverRaid/Scenes/Nicholas/LevelDesign02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiverRaid/Scenes/Nicholas/LevelDesign02.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +89,8 @@
       <updated>1666652738066</updated>
       <workItem from="1666652741799" duration="677000" />
       <workItem from="1666811217989" duration="652000" />
+      <workItem from="1667328550900" duration="9000" />
+      <workItem from="1667328933330" duration="17000" />
     </task>
     <servers />
   </component>

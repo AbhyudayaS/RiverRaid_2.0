@@ -3,7 +3,17 @@ guid: a782d68625c3fb146a1a5e4d83c028e2
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 33418eae8670839409ed31286880079a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RedHIghlights
+    second: {fileID: 2100000, guid: f80754e049781a441b92b125c0aad3c7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
