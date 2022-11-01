@@ -23,7 +23,7 @@ public class Shooting : MonoBehaviour
 
     }    
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         if (_inputListener.interact)
         {
@@ -57,9 +57,9 @@ public class Shooting : MonoBehaviour
         {
             _destination = ray.GetPoint(10f);
         }    
-        var bullet = Instantiate(_projectile._projectilePrefab, _firingPos.position, _firingPos.rotation);
+        var bullet = Instantiate(_projectile._projectilePrefab, _firingPos.position, transform.localRotation);
 
-        bullet.GetComponent<Rigidbody>().velocity = (_destination - _firingPos.position).normalized * _projectile.MoveSpeed + gameObject.GetComponent<Rigidbody>().velocity;
+        bullet.GetComponent<Rigidbody>().velocity = ((_destination - _firingPos.position).normalized * _projectile.MoveSpeed) + gameObject.GetComponent<Rigidbody>().velocity;
         _shootingSound.Play();
     }
 

@@ -5,12 +5,8 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
-    //public Vector3 _direction;
-    //public float speed;
-
-    //private void Update()
-    //{
-    //    transform.Translate((_direction - transform.position).normalized * speed);
-    //}
-
+    private void Start()
+    {
+        Destroy(gameObject, 10f);
+    }
 }

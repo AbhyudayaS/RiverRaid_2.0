@@ -17,6 +17,8 @@ public class BaseAirplaneController : MonoBehaviour
     [SerializeField]
     protected float _throttle = 0f;
     [SerializeField]
+    private float _initThrottle;
+    [SerializeField]
     protected float _boostSpeed = 0f;
     [SerializeField]
     private float _restThrottleTime;
@@ -34,7 +36,6 @@ public class BaseAirplaneController : MonoBehaviour
     private InputListener _inputListener;
     private Rigidbody _rb;
     private Vector3 _rotation;
-    private float _initThrottle;
     private bool _playerDead;
     #endregion
 
@@ -60,7 +61,7 @@ public class BaseAirplaneController : MonoBehaviour
     {
         _inputListener = GetComponent<InputListener>();
         _rb = GetComponent<Rigidbody>();
-        _initThrottle = _throttle;
+     
     }
 
     private void Update()
@@ -129,8 +130,7 @@ public class BaseAirplaneController : MonoBehaviour
             var boost= Mathf.Lerp(_boostSpeed, _initThrottle, (elapsedTime / _restThrottleTime));
             _throttle = boost;
             elapsedTime += Time.deltaTime;
-
-            // Yield here
+         
             yield return null;
         }       
         yield return null;
