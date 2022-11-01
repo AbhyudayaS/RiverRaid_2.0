@@ -10080,9 +10080,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 2
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!114 &8343927258214792089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10113,16 +10113,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerState: {fileID: 11400000, guid: ba54d0e059dd0354cb11c251b5ebdd14, type: 2}
-  _controlSpeed: 35
+  _gameState: {fileID: 11400000, guid: 1342375986cb29a4d9ce1eaee69d0d75, type: 2}
+  _controlSpeed: 42
   _throttle: 1.5
   _initThrottle: 1.5
   _boostSpeed: 3
   _restThrottleTime: 2
   _controlRollFactor: -50
   _rotaionSpeed: 3
-  _boomAudio: {fileID: 1117187793}
-  _boomPS: {fileID: 4855211829877305989}
+  _boomAudio: {fileID: 0}
+  _boomPS: {fileID: 0}
   _planeModel: {fileID: 8343927257842170220}
+  _scoreState: {fileID: 11400000, guid: 0a16afdb968066a438032494fd113a9d, type: 2}
+  _ringPoints: 150
 --- !u!114 &8343927258214792093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20330,12 +20333,6 @@ PrefabInstance:
 --- !u!4 &4146092022806264462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4146092021974884077, guid: aed12c224fbc8704d8eaa07a52e88f44,
-    type: 3}
-  m_PrefabInstance: {fileID: 1318478947}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &4855211829877305989 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4855211828642977510, guid: aed12c224fbc8704d8eaa07a52e88f44,
     type: 3}
   m_PrefabInstance: {fileID: 1318478947}
   m_PrefabAsset: {fileID: 0}
