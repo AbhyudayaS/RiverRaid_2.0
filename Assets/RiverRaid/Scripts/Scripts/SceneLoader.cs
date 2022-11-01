@@ -8,6 +8,8 @@ public class SceneLoader : MonoBehaviour
     [SerializeField]
     private SceneState _scene;
     [SerializeField]
+    private Timer _timer;
+    [SerializeField]
     private ScoreState _scoreState;
 
     public void ChangeScene(int s)
@@ -15,6 +17,7 @@ public class SceneLoader : MonoBehaviour
         _scene.Value = s;
         SceneManager.LoadScene(s);
         _scoreState.Value = 0;
+        _timer.Value = "";
     }
 
     public void Quit()

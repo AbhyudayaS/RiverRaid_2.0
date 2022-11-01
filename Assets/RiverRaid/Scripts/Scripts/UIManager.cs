@@ -7,6 +7,8 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
+    private Timer _timer;
+    [SerializeField]
     private PlayerState _playerState;
     [SerializeField]
     private ScoreState _scoreState;
@@ -22,6 +24,8 @@ public class UIManager : MonoBehaviour
     private GameObject _gameEndUI;
     [SerializeField]
     private TextMeshProUGUI _endGameScoreText;
+    [SerializeField]
+    private TextMeshProUGUI _endGameTotalTimeText;
 
     private void OnEnable()
     {
@@ -44,6 +48,7 @@ public class UIManager : MonoBehaviour
         {
             _gameEndUI.SetActive(true);
             _endGameScoreText.text = _scoreState.Value.ToString();
+            _endGameTotalTimeText.text = _timer.Value+" s";
         }
     }
 
