@@ -9,6 +9,8 @@ public class BaseAirplaneController : MonoBehaviour
 {
     [SerializeField]
     private PlayerState _playerState;
+    [SerializeField]
+    private GameState _gameState;
     #region Variables       
     protected float yThrow = 0f;
     protected float xThrow = 0f;
@@ -32,22 +34,39 @@ public class BaseAirplaneController : MonoBehaviour
     private ParticleSystem _boomPS;
     [SerializeField]
     private GameObject _planeModel;
+    [SerializeField]
+    private ScoreState _scoreState;
+    [SerializeField]
+    private int _ringPoints;
 
     private InputListener _inputListener;
     private Rigidbody _rb;
     private Vector3 _rotation;
     private bool _playerDead;
+    private bool _startGame = false;
     #endregion
 
     private void OnEnable()
     {
         _playerState.Observers += CheckPlayerState;
+        _gameState.Observers += ChangeGameState;
+    }
+
+    private void ChangeGameState(States obj)
+    {
+       if(obj == States.PLAY)
+        {
+            _startGame = true;
+        }
     }
 
     private void OnDisable()
     {
         _playerState.Observers -= CheckPlayerState;
+        _gameState.Observers -= ChangeGameState;
+
     }
+
     private void CheckPlayerState(PState obj)
     {
         if (obj == PState.DEAD)
@@ -66,6 +85,7 @@ public class BaseAirplaneController : MonoBehaviour
 
     private void Update()
     {
+        if (!_startGame) return;
         if (_playerDead) return;
         HandleInput();
         ResetZRot();
@@ -74,6 +94,7 @@ public class BaseAirplaneController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!_startGame) return;
         if (_playerDead) return;
         MoveForward();
     }
@@ -117,9 +138,21 @@ public class BaseAirplaneController : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Rings>() != null)
         {
+            _scoreState.Value += _ringPoints;
             _throttle = _boostSpeed;
             StartCoroutine(ResetThrottle());
         }
+        if (other.gameObject.GetComponent<Enemies>() != null)
+        {
+            _playerState.Value = PState.DEAD;
+        }
+        if (other.gameObject.CompareTag("GameEndCollider"))
+        {
+            _playerDead = true;
+            _rb.velocity = Vector3.zero;
+            _gameState.Value = States.FINISHED;
+        }
+      
     }
 
     IEnumerator ResetThrottle()

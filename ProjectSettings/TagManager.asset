@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FxTemporaire
   - Environment
+  - GameEndCollider
   layers:
   - Default
   - TransparentFX

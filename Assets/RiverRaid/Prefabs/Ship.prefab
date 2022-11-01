@@ -104,6 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f7ba09c641ab343b112c1ca7c43473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scoreState: {fileID: 11400000, guid: 0a16afdb968066a438032494fd113a9d, type: 2}
+  _points: 200
   _model: {fileID: 667012596543726090}
   _ps: {fileID: 8400513101133213726}
   _audioS: {fileID: 6729177264034012304}
