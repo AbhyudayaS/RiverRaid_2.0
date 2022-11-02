@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
 
 
 public class BaseAirplaneController : MonoBehaviour
@@ -40,6 +40,10 @@ public class BaseAirplaneController : MonoBehaviour
     private int _ringPoints;
 
     [SerializeField] private TrailRenderer[] wingTrailEffects;
+    [SerializeField] private CinemachineVirtualCamera _camera;
+    [Header("Camera values")]
+    [SerializeField] private float cameraDefaultFov = 60f;
+    [SerializeField] private float cameraTurboFov = 40f;
 
     private InputListener _inputListener;
     private Rigidbody _rb;
@@ -142,11 +146,13 @@ public class BaseAirplaneController : MonoBehaviour
         {
             _scoreState.Value += _ringPoints;
             _throttle = _boostSpeed;
+            StartCoroutine(ResetCameraFOV(cameraTurboFov));
             foreach (var item in wingTrailEffects)
             {
                 item.gameObject.SetActive(true);
             }
             StartCoroutine(ResetThrottle());
+            StartCoroutine(ResetCameraFOV(cameraDefaultFov));
         }
         if (other.gameObject.GetComponent<Enemies>() != null)
         {
@@ -156,9 +162,21 @@ public class BaseAirplaneController : MonoBehaviour
         {
             _playerDead = true;
             _rb.velocity = Vector3.zero;
-            _gameState.Value = States.FINISHED;
+            StartCoroutine(GameEndDelay());            
         }
       
+    }
+
+    IEnumerator GameEndDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        _gameState.Value = States.FINISHED;
+    }
+
+    public void ChangeCameraFov(float _fov)
+    {
+        float _deltatime = Time.deltaTime * 100f;
+        _camera.m_Lens.FieldOfView = Mathf.Lerp(_camera.m_Lens.FieldOfView, _fov, 0.05f * _deltatime);
     }
 
     IEnumerator ResetThrottle()
@@ -171,13 +189,27 @@ public class BaseAirplaneController : MonoBehaviour
             elapsedTime += Time.deltaTime;
          
             yield return null;
-        }
+        }       
         foreach (var item in wingTrailEffects)
         {
             item.gameObject.SetActive(false);
         }
         yield return null;
     }
+
+    IEnumerator ResetCameraFOV(float fov)
+    {
+        float elapsedTime = 0.0f;
+        while (elapsedTime < _restThrottleTime)
+        {
+            _camera.m_Lens.FieldOfView = Mathf.Lerp(_camera.m_Lens.FieldOfView, fov, (elapsedTime / _restThrottleTime));            
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }       
+        yield return null;
+    }
+
 
     public void PlaneDestroyed()
     {
